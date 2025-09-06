@@ -14,10 +14,10 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <div class="logo-icon">S</div>
                 <div class="logo-text">
-                    <h1>SOFTGATE</h1>
-                    <span>Engenharia e Tecnologia</span>
+                    <a href="#">
+                        <img src="images/logo.svg" alt="Softgate - Engenharia e Tecnologia" class="logo-img" />
+                    </a>
                 </div>
             </div>
             <nav class="nav">
@@ -26,7 +26,6 @@
                     <li><a href="#sobre">SOFTGATE</a></li>
                     <li><a href="#noticias">NOTÍCIAS</a></li>
                     <li><a href="#contactos">CONTACTOS</a></li>
-                    <li><a href="#contactos" class="nav-cta">ORÇAMENTO</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu-toggle">
@@ -38,38 +37,95 @@
         <div class="header-line"></div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h2>Softgate Engenharia</h2>
-                <p>Somos especialistas em construção civil, oferecendo soluções completas para projetos de engenharia. Nossa equipe qualificada garante qualidade, segurança e inovação em cada projeto.</p>
-                <p>Com anos de experiência no mercado, desenvolvemos projetos sustentáveis e eficientes, sempre priorizando a excelência técnica e a satisfação do cliente.</p>
-                <div class="hero-cta">
-                    <a href="#contactos" class="btn-primary">Solicitar Orçamento</a>
-                    <a href="#portfolio" class="btn-secondary">Ver Projetos</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="floating-card">
-                    <i class="fas fa-comments"></i>
-                    <span>Fale Conosco</span>
-                </div>
-            </div>
+    <!-- Slider de Imagens -->
+    <div class="hero-image">
+      <div class="slider">
+        <div class="slide fade">
+          <img src="images/projeto1.png" alt="Projeto 1">
         </div>
-    </section>
+        <div class="slide fade">
+          <img src="images/projeto2.png" alt="Projeto 2">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- NOVA SEÇÃO TEXTO + IMAGEM -->
+<section class="about">
+  <div class="about-content">
+    <!-- IMAGEM À ESQUERDA -->
+    <div class="about-image">
+      <img src="images/Soft.png" alt="Equipe Softgate Engenharia">
+    </div>
+
+    <!-- TEXTO À DIREITA -->
+    <div class="about-text">
+      <h2>Quem Somos</h2>
+      <p>
+        A SOFTGATE actua nos sectores da Construção Civil e Tecnologias de Informação, atendendo
+        clientes particulares, bem como a instituições públicas e privadas. Nasce com o propósito de unir
+        rigor técnico, eficiência e proximidade ao cliente, entregando soluções adequadas a projectos de
+        pequeno e médio porte.
+      </p>
+      <p>
+        O nosso portfólio está em crescimento, acompanhando de forma responsável as necessidades do mercado e consolidando gradualmente a nossa presença.
+      </p>
+      <div class="stats">
+        <div class="stat-item">
+        <img src="images/projeto.svg" alt="Ícone Projetos" class="stat-icon">
+        <h3>20+</h3>
+        <p>Projectos Concluídos</p>
+        </div>
+        <div class="stat-item">
+        <img src="images/experiencia.svg" alt="Ícone Projetos" class="stat-icon">
+        <h3>10+</h3>
+        <p>Anos de Experiência</p>
+        </div>
+        <div class="stat-item">
+        <img src="images/atendimento.svg" alt="Ícone Projetos" class="stat-icon">
+        <h3>20+</h3>
+        <p>Clientes Satisfeitos</p>
+        </div>
+        </div>
+    </div>
+  </div>
+  <section class="about-company">
+  <div class="container">
+    <div class="card">
+      <h2>Missão</h2>
+      <p>
+        Oferecer soluções técnicas e criativas em engenharia e construção, promovendo
+        conforto, segurança e valorização de imóveis.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Visão</h2>
+      <p>
+        Ser referência no sector da construção civil em Angola, destacando-se pela qualidade
+        dos serviços, inovação e confiabilidade
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Valores</h2>
+      <p>
+        Qualidade, compromisso, integridade, inovação e respeito ao cliente
+      </p>
+    </div>
+  </div>
+</section>
+</section>
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="portfolio-content">
-                <div class="portfolio-image">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Projeto de construção moderna">
-                </div>
                 <div class="portfolio-text">
                     <h2>Portfólio</h2>
-                    <p>Nossa carteira de projetos demonstra a versatilidade e qualidade do nosso trabalho. Desde residências até complexos comerciais, cada projeto é executado com os mais altos padrões de qualidade e segurança.</p>
-                    <p>Utilizamos tecnologias avançadas e materiais de primeira linha para garantir durabilidade e eficiência energética em todas as nossas construções.</p>
+                    <p>O nosso portfólio reflete a nossa determinação em construir com qualidade e responsabilidade.
+                    Cada projecto desenvolvido é pensado como uma oportunidade de demonstrar rigor técnico,
+                    eficiência e compromisso com os objectivos dos nossos clientes</p>
                 </div>
             </div>
         </div>
@@ -78,33 +134,32 @@
     <!-- Project Gallery -->
     <section class="project-gallery">
         <div class="container">
-            <h2>Nossos Projetos</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Projeto residencial tradicional">
+                    <img src="images/Softgate_Slade_03.4.png" alt="Projeto residencial tradicional">
                     <div class="gallery-overlay">
                         <h3>Residencial Tradicional</h3>
                         <p>Design clássico com acabamentos refinados</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Projeto comercial moderno">
+                    <img src="images/Softgate_Slade_03.2.png" alt="Projeto comercial moderno">
                     <div class="gallery-overlay">
                         <h3>Comercial Moderno</h3>
                         <p>Espaços funcionais e estética contemporânea</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Projeto comercial moderno">
+                    <img src="images/Softgate_Slade_03.1.png" alt="Projeto comercial moderno">
                     <div class="gallery-overlay">
                         <h3>Comercial Moderno</h3>
                         <p>Espaços funcionais e estética contemporânea</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Projeto em construção">
+                    <img src="images/Softgate_Slade_03.3.png" alt="Projeto em construção">
                     <div class="gallery-overlay">
-                        <h3>Projeto em Construção</h3>
+                        <h3>Projecto em Construção</h3>
                         <p>Processo de execução com qualidade</p>
                     </div>
                 </div>
@@ -121,7 +176,9 @@
                 </div>
                 <div class="services-text">
                     <h2>Nossos Serviços</h2>
-                    <p>A construção civil é uma indústria responsável por projetar, construir, renovar, manter e restaurar diversos tipos de edificações e infraestruturas, como habitações, edifícios comerciais, estradas, pontes e túneis.</p>
+                    <p>Cada projecto começa com uma ideia, mas só ganha valor quando é transformado em realidade
+                        com rigor, inovação e responsabilidade. É com esta visão que oferecemos soluções completas
+                        para a construção e requalificação de espaços, unindo técnica e criatividade em todas as etapas.</p>
                     <div class="services-list">
                         <div class="service-item">
                             <i class="fas fa-check"></i>
@@ -161,7 +218,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section 
     <section id="sobre" class="about">
         <div class="container">
             <div class="about-content">
@@ -169,27 +226,14 @@
                     <h2>Sobre a Softgate</h2>
                     <p>A Softgate Engenharia e Tecnologia é uma empresa especializada em construção civil, comprometida com a excelência e inovação em todos os nossos projetos.</p>
                     <p>Nossa missão é transformar ideias em realidade, construindo espaços que inspirem e funcionem perfeitamente para nossos clientes.</p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h3>50+</h3>
-                            <p>Projetos Concluídos</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>10+</h3>
-                            <p>Anos de Experiência</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>100%</h3>
-                            <p>Clientes Satisfeitos</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Paisagem natural">
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contactos" class="contact">
@@ -197,42 +241,14 @@
             <h2>Entre em Contato</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Endereço</h3>
-                            <p>Comandante Volodia, Prédio da Unta Apt 13</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>softgate.eng@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Telefone</h3>
-                            <p>+244 123 456 789</p>
-                        </div>
-                    </div>
                 </div>
                 <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Seu Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone">
-                    </div>
-                    <div class="form-group">
-                        <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+                <input type="text" id="empresa" name="empresa" placeholder="Empresa">
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="tel" id="telefone" name="telefone" placeholder="Insira o seu número de Telefone">
+                <textarea id="mensagem" name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Enviar Mensagem</button>
                 </form>
             </div>
         </div>
@@ -243,25 +259,31 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <div class="logo-icon">S</div>
-                    <h3>SOFTGATE</h3>
+                    <img src="images/lg.svg" alt="Softgate - Engenharia e Tecnologia" class="logo-img" />
                 </div>
                 <div class="footer-info">
                     <h4>SEDE</h4>
-                    <p>Comandante Volodia, Prédio da Unta Apt 13</p>
+                    <p>Comandante Volodia, <br> Prédio da Unta, Apt 13<br>Luanda - Angola</p>
+                    <p>(+244) 936 217 544 / (+244) 930 388 061</p>
                     <p>softgate.eng@gmail.com</p>
                 </div>
                 <div class="footer-social">
                     <h4>REDES SOCIAIS</h4>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook">
+                            <img src="images/Icone_Facebook.svg" alt="Facebook">
+                        </a>
+                          <a href="#" aria-label="Instagram">
+                            <img src="images/Icone_Instagram.svg" alt="Instagram">
+                        </a>
+                          <a href="#" aria-label="LinkedIn">
+                            <img src="images/Icone_Linkedin.svg" alt="LinkedIn">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Softgate Engenharia e Tecnologia. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Softgate Engenharia e Tecnologia. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>

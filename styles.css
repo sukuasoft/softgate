@@ -6,11 +6,11 @@
 }
 
 :root {
-    --primary-color: #0066cc;
-    --secondary-color: #004499;
+    --primary-color: #20aae2;
+    --secondary-color: #3263a9;
     --accent-color: #00aaff;
-    --text-dark: #333333;
-    --text-light: #666666;
+    --text-dark: #3263a9;
+    --text-light: #3F494D;
     --text-white: #ffffff;
     --bg-light: #f8f9fa;
     --bg-dark: #2c3e50;
@@ -20,7 +20,7 @@
     --shadow-nav: 0 8px 32px rgba(0, 102, 204, 0.15);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --gradient-primary: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+    --gradient-primary: linear-gradient(135deg, #3263a9 0%, #20aae2 100%);
     --gradient-accent: linear-gradient(135deg, #00aaff 0%, #0066cc 100%);
 }
 
@@ -29,8 +29,8 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    font-family: 'Montserrat Medium';
+    line-height: 1.3;
     color: var(--text-dark);
     overflow-x: hidden;
 }
@@ -41,13 +41,14 @@ body {
     padding: 0 20px;
 }
 
+
 /* Header - Design Melhorado */
 .header {
+    position: fixed;
+    top: 0;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    position: fixed;
-    top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -67,7 +68,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
     position: relative;
 }
 
@@ -149,6 +150,10 @@ body {
 
 .nav li {
     position: relative;
+}
+.nav ul li a {
+    font-size: 0.9rem;  /* texto menor */
+    padding: 8px 12px;  /* menos espaçamento nos links */
 }
 
 .nav a {
@@ -339,20 +344,22 @@ body {
 
 .hero-text h2 {
     font-size: 4rem;
+    font-family: 'Montserrat Medium';
     font-weight: 800;
     color: var(--text-white);
     margin-bottom: 30px;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    line-height: 1.1;
+    line-height: 1.3;
     letter-spacing: -1px;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.01rem;
+    font-family: 'Trebuchet MS';
     color: rgba(255, 255, 255, 0.95);
     margin-bottom: 25px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    line-height: 1.7;
+    line-height: 1.3;
 }
 
 .hero-cta {
@@ -513,10 +520,11 @@ body {
 }
 
 .portfolio-text p {
-    font-size: 1.15rem;
+    font-size: 1.02rem;
+     font-family: 'Trebuchet MS';
     color: var(--text-light);
     margin-bottom: 25px;
-    line-height: 1.8;
+    line-height: 1.3;
 }
 
 /* Project Gallery Melhorado */
@@ -549,7 +557,7 @@ body {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
     gap: 35px;
     position: relative;
     z-index: 2;
@@ -557,6 +565,7 @@ body {
 
 .gallery-item {
     position: relative;
+    height: 280px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -571,7 +580,7 @@ body {
 
 .gallery-item img {
     width: 100%;
-    height: 280px;
+    height: 100%;
     object-fit: cover;
     transition: var(--transition);
 }
@@ -610,8 +619,9 @@ body {
 
 /* Services Section Melhorado */
 .services {
+
     padding: 120px 0;
-    background: var(--gradient-primary);
+        background: url("images/Nossa\ visao.png") no-repeat center center/cover;
     color: var(--text-white);
     position: relative;
 }
@@ -632,12 +642,14 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
+    align-items: stretch;
     position: relative;
     z-index: 2;
 }
 
 .services-image {
     position: relative;
+    height: 100%;
 }
 
 .services-image::before {
@@ -647,13 +659,15 @@ body {
     left: -20px;
     right: 20px;
     bottom: 20px;
-    background: rgba(255, 255, 255, 0.1);
+
     border-radius: 20px;
     z-index: -1;
 }
 
 .services-image img {
     width: 100%;
+    height: 100%;   
+    object-fit: cover;   
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
@@ -666,7 +680,8 @@ body {
 }
 
 .services-text p {
-    font-size: 1.15rem;
+    font-size: 1.01rem;
+    font-family: 'Trebuchet MS';
     margin-bottom: 35px;
     line-height: 1.8;
     opacity: 0.95;
@@ -697,16 +712,19 @@ body {
 }
 
 .service-item i {
-    color: var(--accent-color);
-    font-size: 1.3rem;
-    background: rgba(255, 255, 255, 0.2);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
+    display: inline-flex;           /* permite centralizar */
     align-items: center;
     justify-content: center;
+    width: 35px;                    /* largura fixa */
+    height: 35px;                   /* altura fixa = largura */
+    border-radius: 50%;             /* deixa redondo */
+    background: rgba(255, 255, 255, 0.2); /* fundo translúcido */
+    color: var(--text-white);       /* cor do ícone */
+    font-size: 16px;                /* tamanho do ícone dentro */
+    flex-shrink: 0;                 /* não encolhe */
+    margin-right: 10px;             /* espaço entre o ícone e o texto */
 }
+
 
 .service-item span {
     font-weight: 600;
@@ -817,7 +835,6 @@ body {
     left: -20px;
     right: 20px;
     bottom: 20px;
-    background: var(--gradient-primary);
     border-radius: 20px;
     z-index: -1;
     opacity: 0.1;
@@ -832,7 +849,7 @@ body {
 /* Contact Section Melhorado */
 .contact {
     padding: 120px 0;
-    background: var(--text-white);
+    background: #909695;
     position: relative;
 }
 
@@ -860,7 +877,7 @@ body {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template: 1fr 1fr 1fr 1fr \ 1fr 1fr;
     gap: 80px;
 }
 
@@ -914,10 +931,41 @@ body {
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) auto; /* duas colunas + a mensagem */
+  gap: 20px;
 }
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Faz a mensagem ocupar toda a coluna da direita */
+.contact-form textarea {
+  grid-column: 3;        /* fica na terceira coluna */
+  grid-row: 1 / span 2;  /* ocupa duas linhas */
+}
+
+/* Faz o botão ocupar toda a largura embaixo */
+.contact-form button {
+  grid-column: 1;     /* fica só na primeira coluna */
+  width: auto;        /* tamanho do conteúdo */
+  padding: 10px 20px; /* mais compacto */
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  justify-self: start; /* alinha à esquerda da coluna */
+}
+
+
 
 .form-group input,
 .form-group textarea {
@@ -947,8 +995,8 @@ body {
 
 /* Footer com Cores Melhoradas */
 .footer {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%);
-    color: var(--text-white);
+    background: #3F494D;
+    color: #3F494D;
     padding: 80px 0 30px;
     position: relative;
     overflow: hidden;
@@ -960,9 +1008,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 25%, #ec4899 50%, #f59e0b 75%, #10b981 100%);
-    animation: rainbow-shift 8s linear infinite;
+    height: 2px;
+    background: #20aae2;
 }
 
 .footer::after {
@@ -972,9 +1019,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -998,15 +1042,6 @@ body {
     gap: 18px;
 }
 
-.footer-logo .logo-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 24px;
-    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-}
-
 .footer-logo h3 {
     font-size: 2rem;
     font-weight: 800;
@@ -1016,11 +1051,16 @@ body {
     background-clip: text;
     text-shadow: 0 2px 10px rgba(96, 165, 250, 0.3);
 }
+.footer-logo img {
+    width: 150px;
+    height: auto;
+}
+
 
 .footer-info h4 {
     font-size: 1.3rem;
     margin-bottom: 20px;
-    color: #60a5fa;
+    color: #ffffff;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 8px rgba(96, 165, 250, 0.3);
@@ -1029,15 +1069,16 @@ body {
 .footer-social h4 {
     font-size: 1.3rem;
     margin-bottom: 20px;
-    color: #f472b6;
+    color: #ffffff;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 8px rgba(244, 114, 182, 0.3);
 }
 
 .footer-info p {
+    font-size: 0.80rem;
     margin-bottom: 12px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #909695;
     line-height: 1.6;
     transition: var(--transition);
 }
@@ -1056,31 +1097,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
     border-radius: 15px;
     text-decoration: none;
     transition: var(--transition);
+    user-select: none;
     font-size: 1.3rem;
     position: relative;
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.social-links a:nth-child(1) {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-}
 
-.social-links a:nth-child(2) {
-    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
-    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
-}
-
-.social-links a:nth-child(3) {
-    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
-    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
-}
 
 .social-links a::before {
     content: '';
@@ -1102,17 +1131,6 @@ body {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
-.social-links a:nth-child(1):hover {
-    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.6);
-}
-
-.social-links a:nth-child(2):hover {
-    box-shadow: 0 15px 35px rgba(236, 72, 153, 0.6);
-}
-
-.social-links a:nth-child(3):hover {
-    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.6);
-}
 
 .footer-bottom {
     text-align: center;
@@ -1556,7 +1574,8 @@ body {
     }
 
     .hero-text p {
-        font-size: 1.1rem;
+        font-size: 1.01rem;
+         font-family: 'Trebuchet MS';
         max-width: 100%;
         margin: 0 auto 20px;
     }
@@ -1624,11 +1643,8 @@ body {
     }
 
     .gallery-item {
-        border-radius: 15px;
-    }
-
-    .gallery-item img {
         height: 250px;
+        border-radius: 15px;
     }
 
     .whatsapp-float {
@@ -1799,7 +1815,7 @@ body {
         gap: 18px;
     }
     
-    .gallery-item img {
+    .gallery-item {
         height: 220px;
     }
     
@@ -1864,12 +1880,12 @@ body {
     
     .hero-text h2 {
         font-size: 2.2rem;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     
     .hero-text p {
         font-size: 0.95rem;
-        line-height: 1.5;
+        line-height: 1.3;
     }
     
     .btn-primary,
@@ -1925,7 +1941,7 @@ body {
         gap: 15px;
     }
     
-    .gallery-item img {
+    .gallery-item {
         height: 200px;
     }
     
@@ -2012,7 +2028,7 @@ body {
     .hero-text h2 {
         font-size: 2.5rem;
         margin-bottom: 20px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     
     .hero-text p {
@@ -2197,7 +2213,8 @@ body {
     .about-text h2,
     .contact h2,
     .project-gallery h2 {
-        font-size: 1.9rem;
+        font-size: 1.01rem;
+        font-family: 'Trebuchet MS';
         margin-bottom: 18px;
     }
     
@@ -2217,7 +2234,7 @@ body {
         gap: 12px;
     }
     
-    .gallery-item img {
+    .gallery-item {
         height: 180px;
     }
     
@@ -2329,3 +2346,143 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
 } 
+.logo-img {
+    height: 40px;   /* ajuste conforme o tamanho da sua logo */
+    width: auto;
+}
+
+.hero {
+  width: 100%;
+  padding: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 350px;
+  padding: 2rem;
+  z-index: 2;
+  background: rgba(255,255,255,0.8); /* opcional, para contraste */
+  border-radius: 12px;
+}
+
+.hero-image {
+  flex: 2;
+  position: relative;
+  width: 100%;
+  height: 450px; /* controla a altura do slide */
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* garante que a imagem preencha toda a área */
+  border-radius: 0;  /* remove arredondamento para estilo banner */
+}
+
+/* Efeito fade */
+.fade {
+  animation: fadeEffect 1s;
+}
+@keyframes fadeEffect {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* --- ABOUT (Imagem + Texto) --- */
+.about {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 2rem;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.about-text {
+  flex: 1;
+  min-width: 350px;
+}
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-text p {
+    font-size: 1.01rem;
+    font-family: 'Trebuchet MS';
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+.stat-icon {
+  width: 40px;   /* tamanho do ícone */
+  height: 40px;  /* mantém proporcional */
+  margin-bottom: 10px;
+}
+
+.about-company {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.about-company .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.about-company .card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 400px;
+  flex: 1;
+  transition: transform 0.3s;
+}
+
+.about-company .card:hover {
+  transform: translateY(-5px);
+}
+
+.about-company h2 {
+  color: #0066cc;
+  margin-bottom: 15px;
+}
+
+.about-company p {
+  color: #333;
+  line-height: 1.6;
+}
