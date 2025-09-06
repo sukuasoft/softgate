@@ -8,11 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     const header = document.querySelector('.header');
     
-    // Menu Mobile Toggle
+    // Menu Mobile Toggle Melhorado
     if (mobileMenuToggle && nav) {
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             nav.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
+            
+            // Prevenir scroll do body quando menu está aberto
+            if (nav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
         
         // Fechar menu ao clicar em um link
@@ -21,7 +29,26 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function() {
                 nav.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = '';
             });
+        });
+        
+        // Fechar menu ao clicar fora dele
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                nav.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Fechar menu com ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     }
     
@@ -417,22 +444,9 @@ document.addEventListener('DOMContentLoaded', function() {
             transition: transform 0.3s ease, background 0.3s ease;
         }
         
-        .nav.active {
-            display: flex;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            flex-direction: column;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+        /* Removido - conflito com CSS principal */
         
-        .nav.active ul {
-            flex-direction: column;
-            gap: 15px;
-        }
+        /* Removido - conflito com CSS principal */
         
         .mobile-menu-toggle.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
