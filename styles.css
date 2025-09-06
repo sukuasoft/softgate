@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat Medium';
+    font-family: 'Montserrat Medium', sans-serif;
     line-height: 1.3;
     color: var(--text-dark);
     overflow-x: hidden;
@@ -52,9 +52,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: var(--shadow-nav);
     transition: var(--transition);
-    border-bottom: 1px solid rgba(0, 102, 204, 0.1);
 }
 
 .header.scrolled {
@@ -234,25 +232,6 @@ body {
     box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
 }
 
-/* Linha decorativa melhorada */
-.header-line {
-    height: 4px;
-    background: var(--gradient-primary);
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.header-line::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-    animation: shimmer 3s infinite;
-}
 
 @keyframes shimmer {
     0% { left: -100%; }
@@ -2375,7 +2354,7 @@ body {
   flex: 2;
   position: relative;
   width: 100%;
-  height: 450px; /* controla a altura do slide */
+  height: 280px; /* controla a altura do slide */
 }
 
 .slider {
